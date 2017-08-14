@@ -112,10 +112,7 @@
 
                     <p>As we got further and further away, it [the Earth] diminished in size. Finally it shrank to the size of a marble, the most beautiful you can imagine. That beautiful, warm, living object looked so fragile, so delicate, that if you touched it with a finger it would crumble and fall apart. Seeing this has to change a man.</p>
 
-                    <a href="#">
-                        <img class="img-responsive" src="img/post-sample-image.jpg" alt="">
-                    </a>
-                    <span class="caption text-muted">To go places and do things that have never been done before – that’s what living is all about.</span>
+
 
                     <p>Space, the final frontier. These are the voyages of the Starship Enterprise. Its five-year mission: to explore strange new worlds, to seek out new life and new civilizations, to boldly go where no man has gone before.</p>
 
@@ -169,8 +166,12 @@
                       Plug in your microcontroller into the pi
                       Now ssh into your pi and type </p>
                       <blockquote> ls /dev </blockquote>
-                      <p>
-                      the device (when plugged via USB) should show on the list <.image> as dev/ttyUSB0 or dev/ttyACM0 or similar (with other numbers)
+
+                        <a href="#">
+                            <img class="img-responsive" src="img/screens/Screenshot_1.jpg" alt="">
+                        </a>
+                        <span class="caption text-muted">The device (when plugged via USB) should show on the list as dev/ttyUSB0 or dev/ttyACM0 or similar (with other numbers)</span>
+
 
                       If for some reason you cannot see a difference, unplug your USB device,type </p>
                       <blockquote> dmesg -wH </blockquote>
@@ -187,19 +188,19 @@
                       Personally I use GitKraken on my machines but it is still good to know CLI commands (for situations like this for example).
 
                       Install git on your Pi by typing </p>
-                    <blockquote>sudo apt-get install git</blockquote>
+                      <blockquote>sudo apt-get install git</blockquote>
                       <p>
 
                       Next you want to create a new repository on your favourite service (GitHub, GitLab etc)
                        and then clone it somewhere on your pi.
 
-                       The specifics of how each service works differs slightly. As an example, check the GitLab instructions here <link> https://docs.gitlab.com/ce/ssh/README.html<link>
+                       The specifics of how each service works differs slightly. As an example, check the GitLab instructions <a href="https://docs.gitlab.com/ce/ssh/README.html">here</a>
 
                       then test that everything is working by typing </p>
                       <blockquote> git status </blockquote>
 
                       <p>
-                      Read this<.link>https://git-scm.com/book/en/v2<.link> awesome material on Git, to help you become a git power user!
+                      Read <a href="https://git-scm.com/book/en/v2">this</a> awesome material on Git, to help you become a git power user!
 
 
                       Setup Platformio
@@ -216,7 +217,7 @@
                       Then we want to initiate a platformio "project"
                       Navigate to your repository on your Pi: </p>
 
-                      <blockquote> cd /directory/to/your/repo <blockquote>
+                      <blockquote> cd /directory/to/your/repo </blockquote>
                       <p>
                       In our case we are using an Arduino Nano Atmega328. You can find your own board by typing </p>
                       <blockquote> platformio boards </blockquote>
