@@ -9,13 +9,14 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Clean Blog - Sample Post</title>
+    <title>John Gkikas</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Theme CSS -->
-    <link href="css/clean-blog.min.css" rel="stylesheet">
+    <link href="css/clean-blog.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -42,7 +43,7 @@
                     <span class="sr-only">Toggle navigation</span>
                     Menu <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand" href="index.html">Start Bootstrap</a>
+                <a class="navbar-brand" href="index.html">John Gkikas - My Blog</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -53,9 +54,6 @@
                     </li>
                     <li>
                         <a href="about.html">About</a>
-                    </li>
-                    <li>
-                        <a href="post.html">Sample Post</a>
                     </li>
                     <li>
                         <a href="contact.html">Contact</a>
@@ -72,11 +70,11 @@
     <header class="intro-header" style="background-image: url('img/post-bg.jpg')">
         <div class="container">
             <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="col-lg-10">
                     <div class="post-heading">
-                        <h1>Man must explore, and this is exploration at its greatest</h1>
-                        <h2 class="subheading">Problems look mighty small from 150 miles up</h2>
-                        <span class="meta">Posted by <a href="#">Start Bootstrap</a> on August 24, 2014</span>
+                        <h1 style="text-shadow: 2px 2px black;">Remote code deployment with SSH and Platform.io</h1>
+                        <h2 style="text-shadow: 2px 2px black;" class="subheading">On a Raspberry Pi + microcontrollers</h2>
+                        <span style="text-shadow: 2px 2px black;" class="meta">Initially posted on August 14, 2017</span>
                     </div>
                 </div>
             </div>
@@ -87,38 +85,7 @@
     <article>
         <div class="container">
             <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                    <p>Never in all their history have men been able truly to conceive of the world as one: a single sphere, a globe, having the qualities of a globe, a round earth in which all the directions eventually meet, in which there is no center because every point, or none, is center — an equal earth which all men occupy as equals. The airman's earth, if free men make it, will be truly round: a globe in practice, not in theory.</p>
-
-                    <p>Science cuts two ways, of course; its products can be used for both good and evil. But there's no turning back from science. The early warnings about technological dangers also come from science.</p>
-
-                    <p>What was most significant about the lunar voyage was not that man set foot on the Moon but that they set eye on the earth.</p>
-
-                    <p>A Chinese tale tells of some men sent to harm a young girl who, upon seeing her beauty, become her protectors rather than her violators. That's how I felt seeing the Earth for the first time. I could not help but love and cherish her.</p>
-
-                    <p>For those who have seen the Earth from space, and for the hundreds and perhaps thousands more who will, the experience most certainly changes your perspective. The things that we share in our world are far more valuable than those which divide us.</p>
-
-                    <h2 class="section-heading">The Final Frontier</h2>
-
-                    <p>There can be no thought of finishing for ‘aiming for the stars.’ Both figuratively and literally, it is a task to occupy the generations. And no matter how much progress one makes, there is always the thrill of just beginning.</p>
-
-                    <p>There can be no thought of finishing for ‘aiming for the stars.’ Both figuratively and literally, it is a task to occupy the generations. And no matter how much progress one makes, there is always the thrill of just beginning.</p>
-
-                    <blockquote>The dreams of yesterday are the hopes of today and the reality of tomorrow. Science has not yet mastered prophecy. We predict too much for the next year and yet far too little for the next ten.</blockquote>
-
-                    <p>Spaceflights cannot be stopped. This is not the work of any one man or even a group of men. It is a historical process which mankind is carrying out in accordance with the natural laws of human development.</p>
-
-                    <h2 class="section-heading">Reaching for the Stars</h2>
-
-                    <p>As we got further and further away, it [the Earth] diminished in size. Finally it shrank to the size of a marble, the most beautiful you can imagine. That beautiful, warm, living object looked so fragile, so delicate, that if you touched it with a finger it would crumble and fall apart. Seeing this has to change a man.</p>
-
-
-
-                    <p>Space, the final frontier. These are the voyages of the Starship Enterprise. Its five-year mission: to explore strange new worlds, to seek out new life and new civilizations, to boldly go where no man has gone before.</p>
-
-                    <p>As I stand out here in the wonders of the unknown at Hadley, I sort of realize there’s a fundamental truth to our nature, Man must explore, and this is exploration at its greatest.</p>
-
-
+                <div class="col-lg-9 col-lg-offset-1">
                     <p>
 
                       Hello and welcome to my guide!
@@ -135,7 +102,8 @@
                     <p>
 
                       For all of you using a Raspberry Pi to tinker with IoT and microcontrollers and at the same time leaving the raspberry pi at the same spot and never picking it up (unless you want to make something else afterwards)
-                      After this you will be able to :
+                    </p>
+                    <p>After this you will be able to :
                     </p>
                       <div class="list-group">
                       <a href="#" class="list-group-item">Use the raspberry remotely through SSH, no need to even use a Graphical User Interface</a>
@@ -153,36 +121,52 @@
 
 
 
-
+                    <p>
                       First thing is first :
-                      Make sure you have at least a working pi and a microcontroller.
+                      Make sure you have at least a working Pi and a microcontroller.
                       Also you will be needing a wifi dongle for your pi (or at least a spare lan cable if you want to use it less remotely)
                       Depending on your microcontroller, you will need an additional component to test your code/sketch. </p>
-                      <p>
-                        <a href="#">
-                            <img class="img-responsive" src="img\screens\20883675_10155305046711130_876861971_o.jpg" alt="">
-                            <img class="img-responsive" src="img\screens\20883394_10155305046836130_1822447654_o.jpg" alt="">
-                        </a>
+
+                        <div class="col-md-4">
+                          <div class="thumbnail">
+                            <a href="img\screens\20883675_10155305046711130_876861971_o.jpg">
+                              <img src="img\screens\20883675_10155305046711130_876861971_o.jpg" alt="Lights" style="width:100%">
+                            </a>
+                          </div>
+                        </div>
+                        <div class="col-md-4">
+                          <div class="thumbnail">
+                            <a href="img\screens\20883394_10155305046836130_1822447654_o.jpg">
+                              <img src="img\screens\20883394_10155305046836130_1822447654_o.jpg" alt="Nature" style="width:100%">
+                            </a>
+                          </div>
+                        </div>
+                        <div class="col-md-4">
+                          <div class="thumbnail">
+                            <a href="img\screens\20883675_10155305046711130_876861971_o.jpg">
+                              <img src="img\screens\20883675_10155305046711130_876861971_o.jpg" alt="Fjords" style="width:100%">
+                            </a>
+                          </div>
+                        </div>
                         <span class="caption text-muted">Here I am using a raspberry pi 1 and an arduino nano. Ignore the rest of the parts (or not, another article is coming up shortly!)</span>
 
 
+                        <p>
+                      Connect your microcontroller to your Pi. </p>
 
-                      Connect your microcontroller to your Pi
-
-                      If you haven't already, set up a fresh installation of raspbian on an SD card <.link to guide> and power up the pi. then setup your pi for wifi <link to guide> (optional, skip this if you are using a lan cable).
-                      Additional step, check your connected devices to your router ( by default, you can enter your router interface by surfing to 192.168.1.1 on your favourite browser. If it fails, check this <link to router guide>
+                      <p>If you haven't already, <a href="http://www.circuitbasics.com/raspberry-pi-basics-setup-without-monitor-keyboard-headless-mode/">set up a fresh installation of raspbian on an SD card</a>
+                        and power up the pi. then setup your pi for <a href="http://www.circuitbasics.com/raspberry-pi-wifi-installing-wifi-dongle/">wifi</a> (optional, skip this if you are using a lan cable).
+                      Additional step, check your connected devices to your router ( by default, you can enter your router interface by surfing to 192.168.1.1 on your favourite browser. If it fails, check <a href="http://uk.pcmag.com/feature/83093/how-to-access-your-wi-fi-routers-settings">this</a>
                       and assign a permanent ip address to your pi.
+                      I recommend to change your default password.</p>
 
-                      Check this for a more detailed guide for using SSH with your pi.
-                      I recommend to use your default password.
-
+                      <p>
                       Next up we are going to check how the PI is interacting with your usb connected microcontroller.
-                      Plug in your microcontroller into the pi
-                      Now ssh into your pi and type </p>
+                      Plug in your microcontroller into the pi, ssh into your pi and type </p>
                       <blockquote> ls /dev </blockquote>
 
                         <a href="#">
-                            <img class="img-responsive" src="img/screens/Screenshot_1.jpg" alt="">
+                            <img class="img-responsive" src="img/screens/Screenshot_1.jpg" style="width:100%"alt="">
                         </a>
                         <span class="caption text-muted">The device (when plugged via USB) should show on the list as dev/ttyUSB0 or dev/ttyACM0 or similar (with other numbers)</span>
 
@@ -194,14 +178,14 @@
                       and plug it back in. See if there is any update on the text. <image> Try googling with whatever information shows up there.
                       Also make sure your usb cable is not only for charging.
 
-                      after you have identified the device's name, note it down.
+                      after you have identified the device's name, note it down.</p>
 
+                      <br>
+                      <h2> Setting Up Git on your Pi </h2>
 
-                      Setting Up git on your Pi
+                      <p>Personally I use GitKraken on my machines but it is still good to know CLI commands (for situations like this for example).
 
-                      Personally I use GitKraken on my machines but it is still good to know CLI commands (for situations like this for example).
-
-                      Install git on your Pi by typing </p>
+                      Install Git on your Pi by typing </p>
                       <blockquote>sudo apt-get install git</blockquote>
                       <p>
 
@@ -214,12 +198,12 @@
                       <blockquote> git status </blockquote>
 
                       <p>
-                      Read <a href="https://git-scm.com/book/en/v2">this</a> awesome material on Git, to help you become a git power user!
+                      Read <a href="https://git-scm.com/book/en/v2">this</a> awesome material on Git, to help you become a Git power user! </p>
 
+                      <br>
+                      <h2>Setup Platformio</h2>
 
-                      Setup Platformio
-
-                      What is Platformio? Here is what their own docs say about it : </p>
+                      <p>What is Platformio? Here is what their own docs say about it : </p>
 
                       <blockquote> This is cross platform code builder and library manager with platforms like Arduino or MBED support. They took care of toolchains, debuggers, frameworks that work on most popular platforms like Windows, Mac and Linux. It supports more than 200 development boards along with more than 15 development platforms and 10 frameworks. </blockquote>
                       <p>
@@ -236,11 +220,13 @@
                       In our case we are using an Arduino Nano Atmega328. You can find your own board by typing </p>
                       <blockquote> platformio boards </blockquote>
 
-                      <.screenshot2>
+                      <a href="#">
+                          <img class="img-responsive" src="img/screens/Screenshot_2.jpg" style="width:100%"alt="">
+                      </a>
 
-                      Write down the ID of your board.
+                      <p>Write down the ID of your board.
 
-                      next we initialise the project for your specific board. for my nano it would be : </p>
+                      Next we initialise the project for your specific board. for my nano it would be : </p>
                       <blockquote> platformio init -b nanoatmega328 </blockquote>
                       <p>
                       then you can notice the contents of the folder </p>
@@ -261,7 +247,6 @@
                       Should it be successful, you should already see the arduino executing the sketch you wrote before!
 </p>
 
-                    <p>Placeholder text by <a href="http://spaceipsum.com/">Space Ipsum</a>. Photographs by <a href="https://www.flickr.com/photos/nasacommons/">NASA on The Commons</a>.</p>
                 </div>
             </div>
         </div>
@@ -274,6 +259,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                  
                     <ul class="list-inline text-center">
                         <li>
                             <a href="#">
@@ -284,15 +270,15 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="https://www.linkedin.com/in/ioannis-gkikas-0b5a6010b/">
                                 <span class="fa-stack fa-lg">
                                     <i class="fa fa-circle fa-stack-2x"></i>
-                                    <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                                    <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
                                 </span>
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="funkyfisch.github.com">
                                 <span class="fa-stack fa-lg">
                                     <i class="fa fa-circle fa-stack-2x"></i>
                                     <i class="fa fa-github fa-stack-1x fa-inverse"></i>
@@ -300,7 +286,7 @@
                             </a>
                         </li>
                     </ul>
-                    <p class="copyright text-muted">Copyright &copy; Your Website 2016</p>
+                    <p class="copyright text-muted">Copyleft &copy; me myself and I 2k17</p>
                 </div>
             </div>
         </div>
