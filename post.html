@@ -170,7 +170,7 @@
                       Now ssh into your pi and type <code> ls /dev </code>
                       the device (when plugged via USB) should show on the list <image> as dev/ttyUSB0 or dev/ttyACM0 or similar (with other numbers)
 
-                      If for some reason you cannot see a difference, unplug your USB device,type <code> dmesg -wH <code> and plug it back in. See if there is any update on the text. <image> Try googling with whatever information shows up there.
+                      If for some reason you cannot see a difference, unplug your USB device,type <code> dmesg -wH </code> and plug it back in. See if there is any update on the text. <image> Try googling with whatever information shows up there.
                       Also make sure your usb cable is not only for charging.
 
                       after you have identified the device's name, note it down.
@@ -181,7 +181,7 @@
                       Personally I use GitKraken on my machines but it is still good to know CLI commands (for situations like this for example).
 
                       Install git on your Pi by typing
-                      <script>sudo apt-get install git<script>
+                    <.script>sudo apt-get install git<.script>
 
                       Next you want to create a new repository on your favourite service (GitHub, GitLab etc)
                        and then clone it somewhere on your pi.
@@ -189,39 +189,39 @@
                        The specifics of how each service works differs slightly. As an example, check the GitLab instructions here <link> https://docs.gitlab.com/ce/ssh/README.html<link>
 
                       then test that everything is working by typing
-                      <script> git status <script>
+                      <.script> git status <.script>
 
-                      Read this<link>https://git-scm.com/book/en/v2<link> awesome material on Git, to help you become a git power user!
+                      Read this<.link>https://git-scm.com/book/en/v2<.link> awesome material on Git, to help you become a git power user!
 
 
                       Setup Platformio
 
                       What is Platformio? Here is what their own docs say about it :
 
-                      <script> This is cross platform code builder and library manager with platforms like Arduino or MBED support. They took care of toolchains, debuggers, frameworks that work on most popular platforms like Windows, Mac and Linux. It supports more than 200 development boards along with more than 15 development platforms and 10 frameworks. <script>
+                      <.script> This is cross platform code builder and library manager with platforms like Arduino or MBED support. They took care of toolchains, debuggers, frameworks that work on most popular platforms like Windows, Mac and Linux. It supports more than 200 development boards along with more than 15 development platforms and 10 frameworks. <.script>
 
                       The main feature here that helps us is that you can deploy your code remotely to your hardware package (here it is the RPi + Arduino) only with SSH and nothing else!
 
                       Install it :
-                      <script>sudo pip install -U platformio <script>
+                      <.script>sudo pip install -U platformio <.script>
 
                       Then we want to initiate a platformio "project"
                       Navigate to your repository on your Pi:
 
-                      <script> cd /directory/to/your/repo <script>
+                      <.script> cd /directory/to/your/repo <.script>
 
                       In our case we are using an Arduino Nano Atmega328. You can find your own board by typing
-                      <script> platformio boards <script>
+                      <.script> platformio boards <.script>
 
-                      <screenshot2>
+                      <.screenshot2>
 
                       Write down the ID of your board.
 
                       next we initialise the project for your specific board. for my nano it would be :
-                      <script> platformio init -b nanoatmega328 <script>
+                      <.script> platformio init -b nanoatmega328 <.script>
 
                       then you can notice the contents of the folder
-                      <script> ls -a <script>
+                      <.script> ls -a <.script>
 
                       there is a src folder and a lib folder.
                       when you develop on your arduino IDE you have .ino sketches (or sometimes .cpp/.c and .h files) and then you have libraries that you import (for example SimpleDHT library)
@@ -229,9 +229,9 @@
                       the first files go into this src folder, while the libraries go into the lib folder.
 
                       you can now try to write a simple sketch on your main station, then push it to the repository. Then, using the SSH client, log in to your pi again, navigate to your local repository, execute
-                      <script> git pull <script>
+                      <.script> git pull <.script>
                       and then
-                      <script> platformio run -t upload <script>
+                      <.script> platformio run -t upload <.script>
 
                       The above will try to compile your code. You can see text feedback on your console, and any errors that might come up.
 
