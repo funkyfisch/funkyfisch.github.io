@@ -15,7 +15,7 @@
                alert("WebSocket is supported by your Browser!");
                
                // Let us open a web socket
-               var ws = new WebSocket("ws://gusgkiio.hopto.org:9090");
+               var ws = new WebSocket("wss://gusgkiio.hopto.org:9090");
 				
                ws.onopen = function()
                {
@@ -55,7 +55,7 @@
       <div id="sse">
          <a href="javascript:WebSocketTest()">Run WebSocket</a>
       </div>
-	<iframe src="gusgkiio.hopto.org:8080/stream">
+	<iframe src="gusgkiio.hopto.org:8080">
 </iframe>
       
    </body>
